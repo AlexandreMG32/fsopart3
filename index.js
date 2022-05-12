@@ -41,6 +41,7 @@ morgan.token("post", (req, res) => {
     return "";
   }
 });
+app.use(express.static("build"));
 app.use(express.json());
 app.use(morgan(":method :url :response-time :post"));
 
